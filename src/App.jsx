@@ -1,35 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useReducer } from "react";
+import "./App.css";
+import Cell from "./components/Cell.jsx";
+import player from "./functions/player.js"
 
-function App() {
-  const [count, setCount] = useState(0)
+const initialPlayer = 1;
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+function handleCellClick(state, action) {
+  console.log("in handleCellClick, state.grid[action.index]: ", state.grid[action.index]);
+  if (state.grid[action.index] !== 0) {
+    return state;
+  }
+  const newGrid = [...state.grid];
+  const nextPlayer = player(state.grid);
+
+  newGrid[action.index] = nextPlayer;
+  return { grid: newGrid, player: nextPlayer };
 }
 
-export default App
+const initialGrid = Array.from({ length: 9 }).fill(0);
+
+function App() {
+  const [state, dispatcher] = useReducer(handleCellClick, { grid: initialGrid });
+
+  const cells = state.grid.map((cell, index) => <Cell key={index} value={cell} index={index} onClick={dispatcher} />);
+
+  return (
+    <div className="flex justify-center items-center h-screen">
+      <div className="grid grid-cols-3 border border-white ">{cells}</div>
+    </div>
+  );
+}
+
+export default App;

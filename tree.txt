@@ -1,0 +1,30 @@
+Folder PATH listing for volume Windows
+Volume serial number is AA82-AB01
+C:.
+|   .eslintrc.cjs
+|   .gitignore
+|   index.html
+|   package-lock.json
+|   package.json
+|   postcss.config.js
+|   README.md
+|   tailwind.config.js
+|   tree.txt
+|   vite.config.js
+|   
++---public
+|       vite.svg
+|       
+\---src
+    |   App.css
+    |   App.jsx
+    |   index.css
+    |   main.jsx
+    |   output.css
+    |   
+    +---assets
+    |       react.svg
+    |       
+    \---components
+            Cell.jsx
+            
