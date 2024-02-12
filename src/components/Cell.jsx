@@ -3,7 +3,11 @@ import React from "react";
 export default React.memo(function Cell({ value, index, onClick }) {
   // console.log(value);
 
-  const cellClick = () => onClick({ index: index });
+//   const cellClick = () => onClick({ index: index, type: player });
+
+  function cellClick() {
+    onClick({ index: index, type: "player" });
+  }
 
   let token;
   switch (value) {
