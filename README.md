@@ -21,7 +21,7 @@ The objectives were to:
 
 ## Solution
 
-[Deployed here](https://explore-solar-system-ts.vercel.app/)
+[Deployed here](https://tic-tac-toe-iota-sand.vercel.app/)
 
 As per the brief, the solution was implemented using React.  It is primarily designed to be viewed on a small screen such as a mobile device.
 
