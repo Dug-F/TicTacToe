@@ -25,7 +25,7 @@ The objectives were to:
 
 As per the brief, the solution was implemented using React.  It is primarily designed to be viewed on a small screen such as a mobile device.
 
-The app implemnts an adversarial search using minimax algorithms. In looking ahead the computer 'swaps sides' to consider the moves it can make, what the opponent will do in response, what it do in response and so on until the game reaches an end-point.
+The app implements an adversarial search using minimax algorithms. In looking ahead the computer 'swaps sides' to consider the moves it can make, what the opponent will do in response, what it do in response and so on until the game reaches an end-point.
 
 I also implemented some fairly extensive automated testing as I developed the components of the algorithms, partly to check that they were working but also so that I could see exactly what they were doing and how they worked.  The result of this was that the build was a relatively smooth process as most of the bugs had been discovered and fixed before the components were assembled.
 
@@ -45,7 +45,7 @@ Try to beat the computer.  It is surprisingly difficult: the rules of tic-tac-to
 
 ## What I Learned
 
-This has been an excellent project for starting to explore machine learning.  The mechanics of the algorithms are reltively simpple, but the concepts behind them are profound.
+This has been an excellent project for starting to explore machine learning.  The mechanics of the algorithms are relatively simple, but the concepts behind them are profound.
 
 I also reinforced my learning from the higher-or-lower app to re-render only the square clicked on and the square completed in response.  This mechanism is working well and I think it will become my standard approach.
 
