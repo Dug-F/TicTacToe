@@ -40,12 +40,17 @@ function App() {
   const cells = state.grid.map((cell, index) => <Cell key={index} value={cell} index={index} onClick={dispatcher} />);
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen">
-      <div className="grid grid-cols-3 border border-white ">{cells}</div>
-      {/* <button className="text-white mt-10 bg-blue-700 rounded-full border border-white p-3 hover:bg-blue-600 active:bg-blue-800" onClick={handleComputerFirstClick}>
+    <>
+      <h1 className="text-white mt-20 text-4xl font-bold align-center">Tic Tac Toe</h1>
+      <p className="text-white mt-10 text-2xl align-center">Try to beat the computer</p>
+      <p className="text-white mb-10 text-lg align-center">(You go first, playing X)</p>
+      <div className="flex flex-col mt-20 items-center h-screen">
+        <div className="grid grid-cols-3 border border-white ">{cells}</div>
+        {/* <button className="text-white mt-10 bg-blue-700 rounded-full border border-white p-3 hover:bg-blue-600 active:bg-blue-800" onClick={handleComputerFirstClick}>
         Computer first
       </button> */}
-    </div>
+      </div>
+    </>
   );
 }
 
